@@ -1,0 +1,21 @@
+*{
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+
+}
+p{
+    font-size: 40px;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px white;
+    
+}
+select {
+    color: white;
+    width: 30%;
+    background-color: black;
+    height: 30%;
+}

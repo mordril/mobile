@@ -1,0 +1,60 @@
+* {
+    background-color: rgb(145, 200, 231);
+    text-align:left
+    
+}
+.form1 {
+
+        background-color: white;
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+}
+.titulo, .titulo2, .titulo3, .titulo4, .titulo5, .faixa, .h6, .hobby, .bloco, .limpar, .enviar, .nome, .email {
+    background-color: white;
+}
+form input[type=text]{
+    width: 90%;
+    height: 29px;
+    cursor: pointer;
+    background: #ffffff;
+    color: black
+}
+.titulo {
+    text-align: center;
+    font-style: georgia;
+    color: gray;
+}
+.nome, .email {
+    text-align: center;
+    margin-left: 17px;
+
+}
+form input[type=submit]{
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+    background: #5F7C8A;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    transition: 1s;
+    text-align: center;
+    }
+
+form input[type=reset]{
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+    background: #5F7C8A;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    transition: 1s;
+    text-align: center;
+        }

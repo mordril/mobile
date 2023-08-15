@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        intervalos = new Array(3); // vetor 2D c/ intervalos/turno
+        intervalos[0] = new Array("08:00 às 08:50", "08:50 às 09:40", "10:30 às 10:45", "10:45 às 11:35");
+        intervalos[1] = new Array("13:00 às 13:50", "13:50 às 14:40", "15:30 às 16:45", "17:25 às 18:15");
+        intervalos[2] = new Array("18:00 às 18:50", "18:50 às 19:40", "19:40 às 20:30", "20:30 às 21:20");
+        function setIntervalos(f) {
+         idx = f.turno.options.selectedIndex;
+         for (i = 0; i < f.horario.length; i++) {
+         f.horario.options[i].text = intervalos[idx][i];
+         }
+        }
+   
+        function mais(f) { // f é o formulário onde o Select está contido
+        selObj = f.horario;
+        novaOp = new Option(); // (1)
+        novaOp.text = "Intervalo 0" + (selObj.length + 1); // (2)
+        selObj.options[selObj.length] = novaOp; // (3)
+        }
+        function menos(f) {
+        selObj = f.horario;
+        if (selObj.length > 0) {
+        len = selObj.length - 1;
+        selObj.length = len; // length = length - 1
+            }
+        }
+   
+        </script>
+</head>
+<body>
+
+    <form>
+        <p>Escolha um turno:</p>
+        <select name=turno onchange="setIntervalos(this.form)">
+         <option>Manhã</option>
+         <option>Tarde</option>
+         <option>Noite</option>
+        </select>
+        <p>Escolha um ou mais intervalos:</p>
+        <select name=horario size=4 multiple>
+         <option> Intervalo 01 </option> <!-- Estes valores irão mudar -->
+         <option> Intervalo 02 </option>
+         <option> Intervalo 03 </option>
+         <option> Intervalo 04 </option>
+        </select>
+    </form>
+   
+</body>
+</html>
